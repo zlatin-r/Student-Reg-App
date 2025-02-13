@@ -16,5 +16,15 @@ pipeline {
                 bat 'npm run test'
             }
         }
+        stage('Deploy to STAGING') {
+            steps {
+                echo 'Deployn to Staging'
+            }
+        }
+        stage('Deploy to PRODUCTION') {
+            steps {
+                echo 'Deployn to Production'
+            }
+        }
     }
 }
