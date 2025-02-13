@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('NPM Install') {
             steps {
-                echo 'hello world'
+                bat 'npm install'
+            }
+        }
+        stage('Run integration test') {
+            steps {
+                bat 'npm run test'
             }
         }
     }
