@@ -16,13 +16,13 @@ pipeline {
                 bat 'npm run test'
             }
         }
-        stage('Approval for Production Deployment') {
-            steps {
-                script {
-                    input message: 'Proceed with production deployment?', ok: 'Deploy'
-                }
-            }
-        }
+//        stage('Approval for Production Deployment') {
+//            steps {
+//                script {
+//                    input message: 'Proceed with production deployment?', ok: 'Deploy'
+//                }
+//           }
+//        }
         stage('Deploy to STAGING') {
             steps {
                 echo 'Deployn to Staging'
